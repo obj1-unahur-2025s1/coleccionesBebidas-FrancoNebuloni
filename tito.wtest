@@ -30,3 +30,31 @@ describe "test de tito" {
     }
 
 }
+
+describe "Nuevo Test de Tito" {
+  test "Si se agregan nuevos ingredientes a licuado de coctel" {
+    licuadoDeFrutas.agregarIngredientes(hielo)
+    tito.consumir(7, licuadoDeFrutas)
+    assert.equals(20, tito.velocidad())
+  }
+}
+
+describe "Coctel con whisky y agua con whisky" {
+  test "description" {
+    coctel.agregarIngredientes(wisky)
+    coctel.agregarIngredientes(aguaSaborizada)
+    tito.consumir(10, coctel)
+    assert.equals(5, tito.velocidad())
+  }
+}
+
+describe "Coctel con agua en coctel" {
+  test "description" {
+    coctel.agregarIngredientes(aguaSaborizada)
+    coctel.agregarIngredientes(coctel)
+    tito.consumir(2, coctel)
+    assert.equals(5, tito.velocidad())
+  }
+}
+
+
